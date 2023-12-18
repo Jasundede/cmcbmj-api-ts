@@ -11,7 +11,6 @@
 # misc
 DS.store
 .package-lock.json
-yarn.lock
 
 # IDE
 .vscode
