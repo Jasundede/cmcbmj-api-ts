@@ -69,3 +69,296 @@ TSError: ⨯ Unable to compile TypeScript:
   [2m[90m12[39m [36mexport[39m [36mconst[39m getSingleInk = [36masync[39m [34m([39mid[34m:[39m string[34m)[39m[34m:[39m Promise<any> => [34m{[39m[22m
 [1m[31m→[39m[22m [2m[90m13[39m   [36mreturn[39m [36mawait[39m prisma[34m.[39mink[34m.[39m[36mfindUnique[39m[34m([39m[22m
 Inconsistent column data: Malformed ObjectID: provided hex string representation must be exactly 12 bytes, instead got: "u", length 1.
+[LOGGER] 2023-12-25 19:42:57 error: Error on file src/controllers/brand.controller.ts : getAllBrands - 
+[31mInvalid [1m`prisma.brand.create()`[22m invocation in[39m
+[4mC:\Users\HP\Desktop\projects\cmcbmj-api\src\services\brand.service.ts:9:29[24m
+
+  [2m[90m6[39m [34m}[39m[22m
+  [2m[90m7[39m [22m
+  [2m[90m8[39m [36mexport[39m [36mconst[39m addNewBrand = [36masync[39m [34m([39mpayload[34m:[39m BrandType[34m)[39m[34m:[39m Promise<any> => [34m{[39m[22m
+[1m[31m→[39m[22m [2m[90m9[39m   [36mreturn[39m [36mawait[39m prisma[34m.[39mbrand[34m.[39m[36mcreate[39m[34m([39m[22m{
+        data: {
+          brandCode: "HLSUPER12",
+          description: "HLB DJARUM SUPER RJV 12 GHW",
+          criteria: [31m"HINGE LID BOARD"[39m,
+                    [31m~~~~~~~~~~~~~~~~~[39m
+          consType: "NML",
+          bufferRatio: 1.1
+        }
+      }[2m)[22m
+
+Invalid value for argument `[1mcriteria[22m`. Expected [32mCriteria[39m.
+[LOGGER] 2023-12-25 19:43:49 error: Error on file src/controllers/brand.controller.ts : getAllBrands - 
+[31mInvalid [1m`prisma.brand.create()`[22m invocation in[39m
+[4mC:\Users\HP\Desktop\projects\cmcbmj-api\src\services\brand.service.ts:9:29[24m
+
+  [2m[90m6[39m [34m}[39m[22m
+  [2m[90m7[39m [22m
+  [2m[90m8[39m [36mexport[39m [36mconst[39m addNewBrand = [36masync[39m [34m([39mpayload[34m:[39m BrandType[34m)[39m[34m:[39m Promise<any> => [34m{[39m[22m
+[1m[31m→[39m[22m [2m[90m9[39m   [36mreturn[39m [36mawait[39m prisma[34m.[39mbrand[34m.[39m[36mcreate[39m[34m([39m[22m{
+        data: {
+          brandCode: "HLSUPER12",
+          description: "HLB DJARUM SUPER RJV 12 GHW",
+          criteria: [31m"HINGE LID BOARD"[39m,
+                    [31m~~~~~~~~~~~~~~~~~[39m
+          consType: "NML",
+          bufferRatio: 1.1
+        }
+      }[2m)[22m
+
+Invalid value for argument `[1mcriteria[22m`. Expected [32mCriteria[39m.
+[LOGGER] 2023-12-25 19:47:01 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/brand.service.ts[0m:[93m10[0m:[93m5[0m - [91merror[0m[90m TS2322: [0mType '{ brandCode: string; description: string; endUser: string; family: string; criteria: string; substrate: string; consType: string; bufferRatio: number; }' is not assignable to type '(Without<BrandCreateInput, BrandUncheckedCreateInput> & BrandUncheckedCreateInput) | (Without<...> & BrandCreateInput)'.
+  Type '{ brandCode: string; description: string; endUser: string; family: string; criteria: string; substrate: string; consType: string; bufferRatio: number; }' is not assignable to type 'Without<BrandUncheckedCreateInput, BrandCreateInput> & BrandCreateInput'.
+    Type '{ brandCode: string; description: string; endUser: string; family: string; criteria: string; substrate: string; consType: string; bufferRatio: number; }' is not assignable to type 'BrandCreateInput'.
+      Types of property 'criteria' are incompatible.
+        Type 'string' is not assignable to type 'Criteria | undefined'.
+
+[7m10[0m     data: { ...payload }
+[7m  [0m [91m    ~~~~[0m
+
+  [96mnode_modules/.prisma/client/index.d.ts[0m:[93m2024[0m:[93m5[0m
+    [7m2024[0m     data: XOR<BrandCreateInput, BrandUncheckedCreateInput>
+    [7m    [0m [96m    ~~~~[0m
+    The expected type comes from property 'data' which is declared here on type '{ select?: BrandSelect<DefaultArgs> | null | undefined; include?: BrandInclude<DefaultArgs> | null | undefined; data: (Without<...> & BrandUncheckedCreateInput) | (Without<...> & BrandCreateInput); }'
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/brand.service.ts[0m:[93m10[0m:[93m5[0m - [91merror[0m[90m TS2322: [0mType '{ brandCode: string; description: string; endUser: string; family: string; criteria: string; substrate: string; consType: string; bufferRatio: number; }' is not assignable to type '(Without<BrandCreateInput, BrandUncheckedCreateInput> & BrandUncheckedCreateInput) | (Without<...> & BrandCreateInput)'.
+  Type '{ brandCode: string; description: string; endUser: string; family: string; criteria: string; substrate: string; consType: string; bufferRatio: number; }' is not assignable to type 'Without<BrandUncheckedCreateInput, BrandCreateInput> & BrandCreateInput'.
+    Type '{ brandCode: string; description: string; endUser: string; family: string; criteria: string; substrate: string; consType: string; bufferRatio: number; }' is not assignable to type 'BrandCreateInput'.
+      Types of property 'criteria' are incompatible.
+        Type 'string' is not assignable to type 'Criteria | undefined'.
+
+[7m10[0m     data: { ...payload }
+[7m  [0m [91m    ~~~~[0m
+
+  [96mnode_modules/.prisma/client/index.d.ts[0m:[93m2024[0m:[93m5[0m
+    [7m2024[0m     data: XOR<BrandCreateInput, BrandUncheckedCreateInput>
+    [7m    [0m [96m    ~~~~[0m
+    The expected type comes from property 'data' which is declared here on type '{ select?: BrandSelect<DefaultArgs> | null | undefined; include?: BrandInclude<DefaultArgs> | null | undefined; data: (Without<...> & BrandUncheckedCreateInput) | (Without<...> & BrandCreateInput); }'
+
+    at createTSError (C:\Users\HP\Desktop\projects\cmcbmj-api\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\HP\Desktop\projects\cmcbmj-api\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\HP\Desktop\projects\cmcbmj-api\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\HP\Desktop\projects\cmcbmj-api\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\HP\Desktop\projects\cmcbmj-api\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\HP\Desktop\projects\cmcbmj-api\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+[LOGGER] 2023-12-25 19:52:27 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/brand.controller.ts[0m:[93m82[0m:[93m1[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m82[0m }
+[7m  [0m [91m~[0m
+[96msrc/controllers/brand.controller.ts[0m:[93m83[0m:[93m1[0m - [91merror[0m[90m TS1005: [0m'}' expected.
+
+[7m83[0m 
+[7m  [0m [91m[0m
+
+  [96msrc/controllers/brand.controller.ts[0m:[93m61[0m:[93m20[0m
+    [7m61[0m ): Promise<any> => {
+    [7m  [0m [96m                   ~[0m
+    The parser expected to find a '}' to match the '{' token here.
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/brand.controller.ts[0m:[93m82[0m:[93m1[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m82[0m }
+[7m  [0m [91m~[0m
+[96msrc/controllers/brand.controller.ts[0m:[93m83[0m:[93m1[0m - [91merror[0m[90m TS1005: [0m'}' expected.
+
+[7m83[0m 
+[7m  [0m [91m[0m
+
+  [96msrc/controllers/brand.controller.ts[0m:[93m61[0m:[93m20[0m
+    [7m61[0m ): Promise<any> => {
+    [7m  [0m [96m                   ~[0m
+    The parser expected to find a '}' to match the '{' token here.
+
+    at createTSError (C:\Users\HP\Desktop\projects\cmcbmj-api\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\HP\Desktop\projects\cmcbmj-api\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\HP\Desktop\projects\cmcbmj-api\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\HP\Desktop\projects\cmcbmj-api\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\HP\Desktop\projects\cmcbmj-api\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\HP\Desktop\projects\cmcbmj-api\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+[LOGGER] 2023-12-25 19:52:45 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/brand.controller.ts[0m:[93m82[0m:[93m1[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m82[0m }
+[7m  [0m [91m~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/brand.controller.ts[0m:[93m82[0m:[93m1[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m82[0m }
+[7m  [0m [91m~[0m
+
+    at createTSError (C:\Users\HP\Desktop\projects\cmcbmj-api\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\HP\Desktop\projects\cmcbmj-api\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\HP\Desktop\projects\cmcbmj-api\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\HP\Desktop\projects\cmcbmj-api\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\HP\Desktop\projects\cmcbmj-api\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\HP\Desktop\projects\cmcbmj-api\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+[LOGGER] 2023-12-25 19:52:50 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/brand.controller.ts[0m:[93m82[0m:[93m1[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m82[0m }
+[7m  [0m [91m~[0m
+[96msrc/controllers/brand.controller.ts[0m:[93m83[0m:[93m2[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m83[0m }}
+[7m  [0m [91m ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/brand.controller.ts[0m:[93m82[0m:[93m1[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m82[0m }
+[7m  [0m [91m~[0m
+[96msrc/controllers/brand.controller.ts[0m:[93m83[0m:[93m2[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m83[0m }}
+[7m  [0m [91m ~[0m
+
+    at createTSError (C:\Users\HP\Desktop\projects\cmcbmj-api\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\HP\Desktop\projects\cmcbmj-api\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\HP\Desktop\projects\cmcbmj-api\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\HP\Desktop\projects\cmcbmj-api\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\HP\Desktop\projects\cmcbmj-api\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\HP\Desktop\projects\cmcbmj-api\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+[LOGGER] 2023-12-25 19:54:38 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/brand.controller.ts[0m:[93m4[0m:[93m3[0m - [91merror[0m[90m TS2305: [0mModule '"../services/brand.service"' has no exported member 'existBrand'.
+
+[7m4[0m   existBrand,
+[7m [0m [91m  ~~~~~~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/brand.controller.ts[0m:[93m4[0m:[93m3[0m - [91merror[0m[90m TS2305: [0mModule '"../services/brand.service"' has no exported member 'existBrand'.
+
+[7m4[0m   existBrand,
+[7m [0m [91m  ~~~~~~~~~~[0m
+
+    at createTSError (C:\Users\HP\Desktop\projects\cmcbmj-api\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\HP\Desktop\projects\cmcbmj-api\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\HP\Desktop\projects\cmcbmj-api\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\HP\Desktop\projects\cmcbmj-api\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\HP\Desktop\projects\cmcbmj-api\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\HP\Desktop\projects\cmcbmj-api\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+[LOGGER] 2023-12-25 19:57:22 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/brand.controller.ts[0m:[93m40[0m:[93m23[0m - [91merror[0m[90m TS2552: [0mCannot find name 'await'. Did you mean 'Awaited'?
+
+[7m40[0m     const existBrand: await getExistBrand(value.brandCode)
+[7m  [0m [91m                      ~~~~~[0m
+[96msrc/controllers/brand.controller.ts[0m:[93m40[0m:[93m29[0m - [91merror[0m[90m TS7005: [0mVariable 'getExistBrand' implicitly has an 'any' type.
+
+[7m40[0m     const existBrand: await getExistBrand(value.brandCode)
+[7m  [0m [91m                            ~~~~~~~~~~~~~[0m
+[96msrc/controllers/brand.controller.ts[0m:[93m40[0m:[93m29[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m40[0m     const existBrand: await getExistBrand(value.brandCode)
+[7m  [0m [91m                            ~~~~~~~~~~~~~[0m
+[96msrc/controllers/brand.controller.ts[0m:[93m40[0m:[93m42[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m40[0m     const existBrand: await getExistBrand(value.brandCode)
+[7m  [0m [91m                                         ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/brand.controller.ts[0m:[93m40[0m:[93m23[0m - [91merror[0m[90m TS2552: [0mCannot find name 'await'. Did you mean 'Awaited'?
+
+[7m40[0m     const existBrand: await getExistBrand(value.brandCode)
+[7m  [0m [91m                      ~~~~~[0m
+[96msrc/controllers/brand.controller.ts[0m:[93m40[0m:[93m29[0m - [91merror[0m[90m TS7005: [0mVariable 'getExistBrand' implicitly has an 'any' type.
+
+[7m40[0m     const existBrand: await getExistBrand(value.brandCode)
+[7m  [0m [91m                            ~~~~~~~~~~~~~[0m
+[96msrc/controllers/brand.controller.ts[0m:[93m40[0m:[93m29[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m40[0m     const existBrand: await getExistBrand(value.brandCode)
+[7m  [0m [91m                            ~~~~~~~~~~~~~[0m
+[96msrc/controllers/brand.controller.ts[0m:[93m40[0m:[93m42[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m40[0m     const existBrand: await getExistBrand(value.brandCode)
+[7m  [0m [91m                                         ~[0m
+
+    at createTSError (C:\Users\HP\Desktop\projects\cmcbmj-api\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\HP\Desktop\projects\cmcbmj-api\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\HP\Desktop\projects\cmcbmj-api\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\HP\Desktop\projects\cmcbmj-api\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\HP\Desktop\projects\cmcbmj-api\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\HP\Desktop\projects\cmcbmj-api\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+[LOGGER] 2023-12-25 19:58:17 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/brand.controller.ts[0m:[93m39[0m:[93m23[0m - [91merror[0m[90m TS2552: [0mCannot find name 'await'. Did you mean 'Awaited'?
+
+[7m39[0m     const existBrand: await getExistBrand(value.brandCode)
+[7m  [0m [91m                      ~~~~~[0m
+[96msrc/controllers/brand.controller.ts[0m:[93m39[0m:[93m29[0m - [91merror[0m[90m TS7005: [0mVariable 'getExistBrand' implicitly has an 'any' type.
+
+[7m39[0m     const existBrand: await getExistBrand(value.brandCode)
+[7m  [0m [91m                            ~~~~~~~~~~~~~[0m
+[96msrc/controllers/brand.controller.ts[0m:[93m39[0m:[93m29[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m39[0m     const existBrand: await getExistBrand(value.brandCode)
+[7m  [0m [91m                            ~~~~~~~~~~~~~[0m
+[96msrc/controllers/brand.controller.ts[0m:[93m39[0m:[93m42[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m39[0m     const existBrand: await getExistBrand(value.brandCode)
+[7m  [0m [91m                                         ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/brand.controller.ts[0m:[93m39[0m:[93m23[0m - [91merror[0m[90m TS2552: [0mCannot find name 'await'. Did you mean 'Awaited'?
+
+[7m39[0m     const existBrand: await getExistBrand(value.brandCode)
+[7m  [0m [91m                      ~~~~~[0m
+[96msrc/controllers/brand.controller.ts[0m:[93m39[0m:[93m29[0m - [91merror[0m[90m TS7005: [0mVariable 'getExistBrand' implicitly has an 'any' type.
+
+[7m39[0m     const existBrand: await getExistBrand(value.brandCode)
+[7m  [0m [91m                            ~~~~~~~~~~~~~[0m
+[96msrc/controllers/brand.controller.ts[0m:[93m39[0m:[93m29[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m39[0m     const existBrand: await getExistBrand(value.brandCode)
+[7m  [0m [91m                            ~~~~~~~~~~~~~[0m
+[96msrc/controllers/brand.controller.ts[0m:[93m39[0m:[93m42[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m39[0m     const existBrand: await getExistBrand(value.brandCode)
+[7m  [0m [91m                                         ~[0m
+
+    at createTSError (C:\Users\HP\Desktop\projects\cmcbmj-api\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\HP\Desktop\projects\cmcbmj-api\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\HP\Desktop\projects\cmcbmj-api\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\HP\Desktop\projects\cmcbmj-api\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\HP\Desktop\projects\cmcbmj-api\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\HP\Desktop\projects\cmcbmj-api\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+[LOGGER] 2023-12-25 20:11:24 error: Error on file src/controllers/ink.controller.ts : updateBrandById - 
+[31mInvalid [1m`prisma.brand.update()`[22m invocation in[39m
+[4mC:\Users\HP\Desktop\projects\cmcbmj-api\src\services\brand.service.ts:22:29[24m
+
+  [2m[90m19[39m   id[34m:[39m string[34m,[39m[22m
+  [2m[90m20[39m   payload[34m:[39m BrandType[22m
+  [2m[90m21[39m [34m)[39m[34m:[39m Promise<any> => [34m{[39m[22m
+[1m[31m→[39m[22m [2m[90m22[39m   [36mreturn[39m [36mawait[39m prisma[34m.[39mbrand[34m.[39m[36mupdate[39m[34m([39m[22m
+Inconsistent column data: Malformed ObjectID: provided hex string representation must be exactly 12 bytes, instead got: "658979ef8b69e79a848f758", length 23.

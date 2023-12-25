@@ -16,9 +16,9 @@ model Brand {
   description String
   endUser String?
   family String?
-  criteria Criteria @default(HINGE_LID_BOARD)
-  subtrate String? @default("")
-  consType ConsType @default(NML)
+  criteria String? @default("HINGE_LID_BOARD")
+  substrate String? @default("")
+  consType String? @default("NML")
   bufferRatio Float @default(1.1)
   boms Bom[]
   created_at DateTime @default(now())
@@ -44,23 +44,9 @@ model Bom {
   brand Brand @relation(fields: [brandId], references: [id])
   inkId String @db.ObjectId  
   inks Ink @relation(fields: [inkId], references: [id])
-  act_qty Int
-  std_qty Int
+  stdQty Int
+  actQty Int
   created_at DateTime @default(now())
   updated_at DateTime @updatedAt
 }
 
-enum ConsType {
-  ML
-  NML
-}
-
-enum Criteria {
-  HINGE_LID_BOARD
-  DUPLEX_CARTON
-  TIPPING
-  INNER_FRAME
-  ALUFOIL
-  ECOLINER
-  OTHERS
-}
