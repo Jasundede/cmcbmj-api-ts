@@ -1,0 +1,71 @@
+[LOGGER] 2023-12-25 11:58:33 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/routes/index.ts[0m:[93m3[0m:[93m1[0m - [91merror[0m[90m TS1185: [0mMerge conflict marker encountered.
+
+[7m3[0m <<<<<<< Updated upstream
+[7m [0m [91m~~~~~~~[0m
+[96msrc/routes/index.ts[0m:[93m4[0m:[93m1[0m - [91merror[0m[90m TS1185: [0mMerge conflict marker encountered.
+
+[7m4[0m =======
+[7m [0m [91m~~~~~~~[0m
+[96msrc/routes/index.ts[0m:[93m7[0m:[93m1[0m - [91merror[0m[90m TS1185: [0mMerge conflict marker encountered.
+
+[7m7[0m >>>>>>> Stashed changes
+[7m [0m [91m~~~~~~~[0m
+[96msrc/routes/index.ts[0m:[93m12[0m:[93m1[0m - [91merror[0m[90m TS1185: [0mMerge conflict marker encountered.
+
+[7m12[0m <<<<<<< Updated upstream
+[7m  [0m [91m~~~~~~~[0m
+[96msrc/routes/index.ts[0m:[93m13[0m:[93m1[0m - [91merror[0m[90m TS1185: [0mMerge conflict marker encountered.
+
+[7m13[0m =======
+[7m  [0m [91m~~~~~~~[0m
+[96msrc/routes/index.ts[0m:[93m17[0m:[93m1[0m - [91merror[0m[90m TS1185: [0mMerge conflict marker encountered.
+
+[7m17[0m >>>>>>> Stashed changes
+[7m  [0m [91m~~~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/routes/index.ts[0m:[93m3[0m:[93m1[0m - [91merror[0m[90m TS1185: [0mMerge conflict marker encountered.
+
+[7m3[0m <<<<<<< Updated upstream
+[7m [0m [91m~~~~~~~[0m
+[96msrc/routes/index.ts[0m:[93m4[0m:[93m1[0m - [91merror[0m[90m TS1185: [0mMerge conflict marker encountered.
+
+[7m4[0m =======
+[7m [0m [91m~~~~~~~[0m
+[96msrc/routes/index.ts[0m:[93m7[0m:[93m1[0m - [91merror[0m[90m TS1185: [0mMerge conflict marker encountered.
+
+[7m7[0m >>>>>>> Stashed changes
+[7m [0m [91m~~~~~~~[0m
+[96msrc/routes/index.ts[0m:[93m12[0m:[93m1[0m - [91merror[0m[90m TS1185: [0mMerge conflict marker encountered.
+
+[7m12[0m <<<<<<< Updated upstream
+[7m  [0m [91m~~~~~~~[0m
+[96msrc/routes/index.ts[0m:[93m13[0m:[93m1[0m - [91merror[0m[90m TS1185: [0mMerge conflict marker encountered.
+
+[7m13[0m =======
+[7m  [0m [91m~~~~~~~[0m
+[96msrc/routes/index.ts[0m:[93m17[0m:[93m1[0m - [91merror[0m[90m TS1185: [0mMerge conflict marker encountered.
+
+[7m17[0m >>>>>>> Stashed changes
+[7m  [0m [91m~~~~~~~[0m
+
+    at createTSError (C:\Users\HP\Desktop\projects\cmcbmj-api\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\HP\Desktop\projects\cmcbmj-api\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\HP\Desktop\projects\cmcbmj-api\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\HP\Desktop\projects\cmcbmj-api\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\HP\Desktop\projects\cmcbmj-api\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\HP\Desktop\projects\cmcbmj-api\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+[LOGGER] 2023-12-25 12:06:14 error: Error on file src/controllers/ink.controller.ts : getInkById - 
+[31mInvalid [1m`prisma.ink.findUnique()`[22m invocation in[39m
+[4mC:\Users\HP\Desktop\projects\cmcbmj-api\src\services\ink.service.ts:13:27[24m
+
+  [2m[90m10[39m [34m}[39m[22m
+  [2m[90m11[39m [22m
+  [2m[90m12[39m [36mexport[39m [36mconst[39m getSingleInk = [36masync[39m [34m([39mid[34m:[39m string[34m)[39m[34m:[39m Promise<any> => [34m{[39m[22m
+[1m[31m→[39m[22m [2m[90m13[39m   [36mreturn[39m [36mawait[39m prisma[34m.[39mink[34m.[39m[36mfindUnique[39m[34m([39m[22m
+Inconsistent column data: Malformed ObjectID: provided hex string representation must be exactly 12 bytes, instead got: "u", length 1.

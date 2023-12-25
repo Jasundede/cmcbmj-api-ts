@@ -1,0 +1,66 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model Brand {
+  id    String @id @default(auto()) @map("_id") @db.ObjectId
+  brandCode String @unique
+  description String
+  endUser String?
+  family String?
+  criteria Criteria @default(HINGE_LID_BOARD)
+  subtrate String? @default("")
+  consType ConsType @default(NML)
+  bufferRatio Float @default(1.1)
+  boms Bom[]
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
+}
+
+model Ink {
+  id    String @id @default(auto()) @map("_id") @db.ObjectId
+  inkCode String @unique
+  description String
+  viscosity String? @default("17-18 second")
+  toner String[] @default([])
+  additive String[] @default([])
+  medium String[] @default([])
+  boms Bom[]
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
+}
+
+model Bom {
+  id    String @id @default(auto()) @map("_id") @db.ObjectId
+  brandId String  @db.ObjectId  
+  brand Brand @relation(fields: [brandId], references: [id])
+  inkId String @db.ObjectId  
+  inks Ink @relation(fields: [inkId], references: [id])
+  act_qty Int
+  std_qty Int
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
+}
+
+enum ConsType {
+  ML
+  NML
+}
+
+enum Criteria {
+  HINGE_LID_BOARD
+  DUPLEX_CARTON
+  TIPPING
+  INNER_FRAME
+  ALUFOIL
+  ECOLINER
+  OTHERS
+}
