@@ -109,6 +109,15 @@ export const delBrandById = async (
   try {
     const { id } = req.params
 
+    const existBrand = await getSingleBrand(id)
+
+    if (existBrand == null) {
+      return res.status(404).json({
+        error: 'Data Not Found',
+        message: 'Failed Delete Data',
+        data: null
+      })
+    }
     const data = await deleteBrandById(id)
     if (data != null) {
       return res.status(200).json({
@@ -140,6 +149,17 @@ export const updateBrandById = async (
   try {
     const { id } = req.params
     const { error, value } = addBrandValidation(req.body)
+
+    const existBrand = await getSingleBrand(id)
+
+    if (existBrand == null) {
+      return res.status(404).json({
+        error: 'Data Not Found',
+        message: 'Failed Update Data',
+        data: null
+      })
+    }
+
     const updatedBrand = await updateSingleBrand(id, value)
 
     if (error != null) {

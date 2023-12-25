@@ -362,3 +362,21 @@ TSError: ⨯ Unable to compile TypeScript:
   [2m[90m21[39m [34m)[39m[34m:[39m Promise<any> => [34m{[39m[22m
 [1m[31m→[39m[22m [2m[90m22[39m   [36mreturn[39m [36mawait[39m prisma[34m.[39mbrand[34m.[39m[36mupdate[39m[34m([39m[22m
 Inconsistent column data: Malformed ObjectID: provided hex string representation must be exactly 12 bytes, instead got: "658979ef8b69e79a848f758", length 23.
+[LOGGER] 2023-12-25 20:17:01 error: Error on file src/controllers/brand.controller.ts : delBrandById - 
+[31mInvalid [1m`client_1.default.brand.delete()`[22m invocation in[39m
+[4mC:\Users\HP\Desktop\projects\cmcbmj-api\build\services\brand.service.js:45:47[24m
+
+  [2m[90m42[39m [34m}[39m[34m)[39m[34m;[39m[22m
+  [2m[90m43[39m exports[34m.[39mgetExistBrand = getExistBrand[34m;[39m[22m
+  [2m[90m44[39m [36mconst[39m deleteBrandById = [34m([39mid[34m)[39m => [36m__awaiter[39m[34m([39m[36mvoid[39m [36m0[39m[34m,[39m [36mvoid[39m [36m0[39m[34m,[39m [36mvoid[39m [36m0[39m[34m,[39m [36mfunction[39m* [34m([39m[34m)[39m [34m{[39m[22m
+[1m[31m→[39m[22m [2m[90m45[39m     [36mreturn[39m [36myield[39m client_1[34m.[39mdefault[34m.[39mbrand[34m.[39m[36mdelete[39m[34m([39m[22m
+An operation failed because it depends on one or more records that were required but not found. Record to delete does not exist.
+[LOGGER] 2023-12-25 20:20:04 error: Error on file src/controllers/brand.controller.ts : delBrandById - 
+[31mInvalid [1m`client_1.default.brand.delete()`[22m invocation in[39m
+[4mC:\Users\HP\Desktop\projects\cmcbmj-api\build\services\brand.service.js:45:47[24m
+
+  [2m[90m42[39m [34m}[39m[34m)[39m[34m;[39m[22m
+  [2m[90m43[39m exports[34m.[39mgetExistBrand = getExistBrand[34m;[39m[22m
+  [2m[90m44[39m [36mconst[39m deleteBrandById = [34m([39mid[34m)[39m => [36m__awaiter[39m[34m([39m[36mvoid[39m [36m0[39m[34m,[39m [36mvoid[39m [36m0[39m[34m,[39m [36mvoid[39m [36m0[39m[34m,[39m [36mfunction[39m* [34m([39m[34m)[39m [34m{[39m[22m
+[1m[31m→[39m[22m [2m[90m45[39m     [36mreturn[39m [36myield[39m client_1[34m.[39mdefault[34m.[39mbrand[34m.[39m[36mdelete[39m[34m([39m[22m
+An operation failed because it depends on one or more records that were required but not found. Record to delete does not exist.
